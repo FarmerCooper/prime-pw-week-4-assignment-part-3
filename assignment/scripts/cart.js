@@ -59,3 +59,15 @@ console.log(isFull());
 
 console.log("There was more room (expect false)", addItem("cars"))
 
+function removeItem(value, array) {
+     if (0 === basket.indexOf(value)) {
+          return value && array.splice(value);
+     }
+          return false;
+ }
+  
+
+console.log(basket)
+
+
+
