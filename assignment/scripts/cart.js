@@ -6,6 +6,7 @@ let basket = [];
 
 function addItem(value, array) {
      basket.push(value);
+     basket.splice(5);
           for (let i=0; i<basket.length; i++){
                if (value === basket[i]){
                     return true;
@@ -13,6 +14,7 @@ function addItem(value, array) {
 }    
                  return false;
 }
+
 
 addItem("Cessna", basket);
 console.log("Basket should have Cessna", basket);
@@ -22,7 +24,9 @@ addItem("Boeing")
 console.log("Should have Lockheed Martin and Boeing", basket)
 
 console.log("Adding Northrup Grumman, should be true", addItem('Northrup Grumman'));
-//console.log(addItem("Checking if Airbus has been added (I expect false)", "Airbus", basket))
+
+addItem("Cirrus", basket)
+
 
 function listItems(){
      for (let i=0; i<basket.length; i++);{
@@ -52,3 +56,6 @@ function isFull() {
 }
 
 console.log(isFull());
+
+console.log("There was more room (expect false)", addItem("cars"))
+
